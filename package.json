@@ -7,9 +7,12 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "daisyui": "^5.1.5",
     "next": "^15.5.2",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0"
