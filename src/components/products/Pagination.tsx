@@ -11,7 +11,7 @@ const Pagination: React.FC<PaginationProps> = ({
 }) => {
   const renderPageButtons = () => {
     const pageButtons = [];
-    const maxButtonsToShow = 5;
+    const maxButtonsToShow = 3;
     const halfButtons = Math.floor(maxButtonsToShow / 2);
 
     let start = Math.max(1, currentPage - halfButtons);
