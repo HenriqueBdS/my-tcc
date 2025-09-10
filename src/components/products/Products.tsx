@@ -82,7 +82,10 @@ function Products() {
           {error}
         </p>
       ) : (
-        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto gap-4 p-4">
+        <div
+          className="grid w-full grid-cols-1 sm:grid-cols-2 
+        lg:grid-cols-3 max-w-screen-xl mx-auto gap-4 p-4"
+        >
           {products.length > 0 ? (
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             products.map((product: any) => (
