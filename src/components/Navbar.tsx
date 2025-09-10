@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,18 @@ function Navbar() {
         className="navbar bg-base-200 shadow-sm flex justify-between z-[60] relative"
       >
         {/* Lado esquerdo da NavBar */}
+
         <div className="flex items-center gap-6">
+          {/* LOGO */}
+          <div>
+            <Image
+              src="/camera.avif"
+              alt="Logo da Loja"
+              width={58}
+              height={58}
+              className="ml-4 rounded-full"
+            />
+          </div>
           {/* Navigation links */}
           <div className="hidden md:flex items-center justify-center gap-8">
             <button className="text-3xl text-base-content cursor-pointer hover:text-gray-600">
@@ -141,6 +153,7 @@ function Navbar() {
           >
             Criar conta
           </Link>
+          {/* Carrinho */}
           <div className="text-3xl cursor-pointer hover:text-gray-600 text-center pb-4">
             <Link href="/carrinho">
               <svg
