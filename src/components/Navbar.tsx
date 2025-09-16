@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,6 +65,11 @@ function Navbar() {
               >
                 Criar conta
               </Link>
+            </div>
+
+            {/* Theme Switcher */}
+            <div className="hidden md:flex">
+              <ThemeSwitcher />
             </div>
 
             {/* Cart */}
@@ -172,6 +178,9 @@ function Navbar() {
               </svg>
               Carrinho
             </Link>
+          </div>
+          <div className="cursor-pointer hover:text-gray-600 text-center pb-4">
+            <ThemeSwitcher />
           </div>
         </div>
       </div>
