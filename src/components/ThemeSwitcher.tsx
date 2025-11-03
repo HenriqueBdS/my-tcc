@@ -9,22 +9,22 @@ function ThemeSwitcher() {
   // Pega o tema atual do localStorage ou define THEME_1 como padrão
   const [theme, setTheme] = useState(() => {
     // garante que o localStorage  só seja chamado se o código estiver rodando no ambiente do navegador
-    if (typeof window !== 'undefined') {
-    const savedTheme = localStorage.getItem("theme");
-    return savedTheme === THEME_1 || savedTheme === THEME_2
-      ? savedTheme
-      : THEME_1;
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      return savedTheme === THEME_1 || savedTheme === THEME_2
+        ? savedTheme
+        : THEME_1;
     }
   });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      document.documentElement.setAttribute('data-theme', theme ?? THEME_1);
-      localStorage.setItem('theme', theme ?? THEME_1);
+    if (typeof window !== "undefined") {
+      document.documentElement.setAttribute("data-theme", theme ?? THEME_1);
+      localStorage.setItem("theme", theme ?? THEME_1);
     }
   }, [theme]);
 
-  const handleThemeChange = (e: { target: { checked: boolean; }; }) => {
+  const handleThemeChange = (e: { target: { checked: boolean } }) => {
     const newTheme = e.target.checked ? THEME_2 : THEME_1;
     setTheme(newTheme);
   };

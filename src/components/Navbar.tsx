@@ -100,6 +100,7 @@ function Navbar() {
             <button
               className="btn btn-circle swap swap-rotate md:hidden"
               onClick={toggleMenu}
+              aria-label="Ativa menu mobile"
             >
               {/* Hamburger icon */}
               <svg
