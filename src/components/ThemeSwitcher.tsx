@@ -36,6 +36,7 @@ function ThemeSwitcher() {
         className="theme-controller"
         checked={theme === THEME_2}
         onChange={handleThemeChange}
+        aria-label="Mudar o tema do site"
       />
 
       {/* sun icon */}
